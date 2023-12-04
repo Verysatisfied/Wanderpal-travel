@@ -6,7 +6,7 @@ import {
   editRecordThunk,
   deleteRecordThunk,
 } from "./recordThunk";
-import { fetchLocalRecords } from "./allRecordsSlice";
+
 // Action to store the record locally
 
 export const storeLocally = (record) => {
