@@ -222,20 +222,6 @@ const allRecordsSlice = createSlice({
       .addCase(fetchLocalRecords.fulfilled, (state, action) => {
         state.isLoading = false;
         state.records = action.payload;
-      })
-      .addCase(fetchLocalRecords.rejected, (state, action) => {
-        state.isLoading = false;
-        // handle error
-      });
-  },
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchLocalRecords.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(fetchLocalRecords.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.records = action.payload;
         state.numOfPages = Math.ceil(
           action.payload.length / state.recordsPerPage
         );
@@ -243,9 +229,14 @@ const allRecordsSlice = createSlice({
       .addCase(fetchLocalRecords.rejected, (state, action) => {
         state.isLoading = false;
         // handle error
+        state.error = action.error.message;
       })
       .addCase(showStats.fulfilled, (state, action) => {
         state.stats = action.payload;
+      })
+      .addCase(showStats.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message; // Store the error message
       });
   },
 });
