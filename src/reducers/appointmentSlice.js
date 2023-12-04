@@ -120,63 +120,52 @@ const appointmentSlice = createSlice({
       }
     },
   },
-  extraReducers: {
-    [createRecord.pending]: (state) => {
-      state.isLoading = true;
-    },
-    [createRecord.fulfilled]: (state, action) => {
-      const newData = action.payload;
-      state.isLoading = false;
-      state.localRecords = [...state.localRecords, newData];
-      toast.success("Record Created");
-      storeLocally(newData);
-      console.log("Record Created:", newData);
-    },
-    [createRecord.rejected]: (state, { payload }) => {
-      state.isLoading = false;
-      toast.error(payload);
-    },
-  },
   extraReducers: (builder) => {
     builder
+      .addCase(createRecord.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(createRecord.fulfilled, (state, action) => {
+        const newData = action.payload;
+        state.isLoading = false;
+        state.localRecords = [...state.localRecords, newData];
+        toast.success("Record Created");
+        storeLocally(newData);
+        // console.log("Record Created:", newData);
+      })
+      .addCase(createRecord.rejected, (state, action) => {
+        state.isLoading = false;
+        // toast.error(action.payload);
+      })
       .addCase(deleteRecordAsync.pending, (state) => {
-        // You can handle loading state if needed
         state.isLoading = true;
       })
       .addCase(deleteRecordAsync.fulfilled, (state, action) => {
         const deletedRecordId = action.payload;
         state.isLoading = false;
 
-        // Update local records in the Redux state
         state.localRecords = state.localRecords.filter(
           (record) => record.id !== deletedRecordId
         );
 
-        // Optionally, you can also update local storage here if needed
         localStorage.setItem(
           "localRecords",
           JSON.stringify(state.localRecords)
         );
       })
       .addCase(deleteRecordAsync.rejected, (state, action) => {
-        // Handle any error if needed
         state.isLoading = false;
         console.error("Error deleting record:", action.error.message);
-      });
-  },
-  extraReducers: (builder) => {
-    builder
+      })
       .addCase(editRecordAsync.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(editRecordAsync.fulfilled, (state, action) => {
         toast.success("Record updated successfully!");
-
         state.isLoading = false;
       })
       .addCase(editRecordAsync.rejected, (state, action) => {
         toast.error("Error editing record. Please try again.");
-
         state.isLoading = false;
       });
   },

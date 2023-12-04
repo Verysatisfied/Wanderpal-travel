@@ -236,7 +236,6 @@ const allRecordsSlice = createSlice({
       .addCase(fetchLocalRecords.fulfilled, (state, action) => {
         state.isLoading = false;
         state.records = action.payload;
-        // console.log(state.records);
         state.numOfPages = Math.ceil(
           action.payload.length / state.recordsPerPage
         );
