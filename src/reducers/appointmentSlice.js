@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-import { useDispatch } from "react-redux";
+
 import {
   createRecordThunk,
   editRecordThunk,

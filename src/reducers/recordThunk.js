@@ -1,5 +1,5 @@
 import { logoutUser } from "./userSlice";
-import { showLoading, hideLoading, fetchLocalRecords } from "./allRecordsSlice";
+import { showLoading, hideLoading } from "./allRecordsSlice";
 import { storeLocally } from "./appointmentSlice";
 import { deleteRecord } from "./appointmentSlice";
 import { editRecord } from "./appointmentSlice";
