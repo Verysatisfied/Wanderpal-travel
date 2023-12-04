@@ -14,10 +14,14 @@ export const Landing = () => {
             We <span> Care</span> About You
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            repellat delectus, error, optio officia fugiat quod nihil facilis in
-            repellendus commodi reprehenderit. Quisquam voluptate, aliquam
-            ducimus perspiciatis iste quam tenetur!
+            At WeCare, we understand that managing your health should be simple,
+            intuitive, and empowering. Our platform is designed to streamline
+            your healthcare journey, offering a one-stop solution for all your
+            medical record needs. WeCare is here to revolutionize the way you
+            engage with your well-being. <br />
+            {/* <br />
+            · Holistic Health Record
+            <br />· Insightful Analytics */}
           </p>
           {user ? (
             <Link to="/dashboard" className="btn btn-hero">

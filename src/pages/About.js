@@ -15,19 +15,15 @@ const AboutPage = () => {
             <div className="underline"></div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
-            assumenda eius saepe, magnam ad ut voluptatum harum at eaque quasi
-            tenetur labore voluptatem sunt doloribus unde impedit! Et,
-            perspiciatis? Lorem ipsum dolor sit, amet consectetur adipisicing
-            elit. Blanditiis, quam perspiciatis quo sed sapiente inventore.
-            Suscipit nam aut sequi temporibus, vitae dolorem impedit sunt
-            repellat ut, assumenda voluptatum ea reiciendis?
+            Discover the story behind WeCare. Our visionary team is committed to
+            revolutionizing health management, providing a platform where every
+            patient's journey is valued and empowered. Our mission is to make
+            healthcare records meaningful, accessible.
           </p>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor odio
-            libero officia! Laudantium neque optio perspiciatis eaque ipsum
-            quasi blanditiis corporis molestiae, id voluptatibus illum? Mollitia
-            dignissimos ullam aliquid suscipit.
+            Join us ! We redefine health management, placing significance on
+            every aspect of your well-being. Your journey to better health
+            starts here.
           </p>
           <p className="question-text">
             Got a question?
