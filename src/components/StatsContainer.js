@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import StatItem from "./StatItem";
 import { FaSuitcaseRolling, FaCalendarCheck, FaBug } from "react-icons/fa";
 import Wrapper from "../assets/wrappers/StatsContainer";
-import PieChart from "./PieChart";
+
 const StatsContainer = () => {
   const stats = useSelector((state) => state.allRecords.stats);
 
@@ -31,11 +31,11 @@ const StatsContainer = () => {
     },
   ];
 
-  const pieChartData = [
-    { name: "Scheduled Appointment", value: stats.scheduledAppointmentCount },
-    { name: "Emergency Visit", value: stats.emergencyVisitCount },
-    { name: "Routine Checkup", value: stats.routineCheckupCount },
-  ];
+  // const pieChartData = [
+  //   { name: "Scheduled Appointment", value: stats.scheduledAppointmentCount },
+  //   { name: "Emergency Visit", value: stats.emergencyVisitCount },
+  //   { name: "Routine Checkup", value: stats.routineCheckupCount },
+  // ];
 
   return (
     <Wrapper>

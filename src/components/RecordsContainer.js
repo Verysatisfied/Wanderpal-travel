@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Record from "./Record";
 import Wrapper from "../assets/wrappers/JobsContainer";
 import { useSelector, useDispatch } from "react-redux";
-import { RingLoader } from "react-spinners";
+
 import {
   fetchLocalRecords,
   updateCurrentPage,

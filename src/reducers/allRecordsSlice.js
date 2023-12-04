@@ -1,6 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { toast } from "react-toastify";
-import React, { useEffect } from "react";
 
 export const fetchLocalRecords = createAsyncThunk(
   "allRecords/fetchLocalRecords",

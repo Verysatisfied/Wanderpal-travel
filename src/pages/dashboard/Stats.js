@@ -5,7 +5,7 @@ import { showStats } from "../../reducers/allRecordsSlice";
 import { StatsContainer, ChartsContainer } from "../../components";
 
 const Stats = () => {
-  const { isLoading } = useSelector((store) => store.allRecords);
+  // const { isLoading } = useSelector((store) => store.allRecords);
   const monthlyApplications = useSelector(
     (state) => state.allRecords.stats.monthlyApplications || {}
   );

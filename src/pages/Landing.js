@@ -1,5 +1,4 @@
-import logo from "../assets/images/logo.svg";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import main from "../assets/images/landingImg.svg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";

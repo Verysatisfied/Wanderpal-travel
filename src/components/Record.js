@@ -1,11 +1,11 @@
 import React from "react";
-import { useEffect } from "react";
+
 import { FaLocationArrow, FaBriefcase, FaCalendarAlt } from "react-icons/fa";
 import { CgNotes } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import Wrapper from "../assets/wrappers/Job";
 import { useDispatch } from "react-redux";
-import { createAction } from "@reduxjs/toolkit";
+
 import RecordInfo from "./RecordInfo";
 import moment from "moment";
 import { useSelector } from "react-redux";

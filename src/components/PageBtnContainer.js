@@ -1,7 +1,7 @@
 import React from "react";
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 import Wrapper from "../assets/wrappers/PageBtnContainer";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { updateCurrentPage } from "../reducers/allRecordsSlice";
 const PageBtnContainer = ({ currentPage, numOfPages, onPageChange }) => {
   const dispatch = useDispatch();

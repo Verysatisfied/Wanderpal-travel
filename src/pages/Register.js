@@ -24,7 +24,7 @@ const Register = () => {
         navigate("/dashboard");
       }, 3000);
     }
-  }, [user]);
+  }, [user, navigate]);
 
   const handleChange = (e) => {
     const name = e.target.name;

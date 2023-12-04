@@ -9,7 +9,7 @@ import {
   Register,
   ProtectedRoute,
 } from "./pages";
-import { Navbar, Sidebar, Footer, BlogDetail } from "./components";
+import { Navbar, Sidebar, BlogDetail } from "./components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
   AddJob,

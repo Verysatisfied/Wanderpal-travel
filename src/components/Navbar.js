@@ -4,9 +4,9 @@ import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
-import { FaAlignLeft, FaUserCircle, FaCaretDown } from "react-icons/fa";
+import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { toggleSidebar } from "../reducers/sidebarReducer";
-import Logo from "./Logo";
+
 import { logoutUser } from "../reducers/userSlice";
 
 export const Navbar = () => {
