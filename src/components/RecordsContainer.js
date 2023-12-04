@@ -18,12 +18,11 @@ const RecordsContainer = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    // Check if currentPage is greater than the updated numOfPages
-    // If so, set currentPage to the last page
-    if (currentPage > numOfPages) {
+    if (numOfPages >= 1 && currentPage > numOfPages) {
       dispatch(updateCurrentPage(numOfPages));
     }
   }, [numOfPages, currentPage, dispatch]);
+
   const handlePageChange = (page) => {
     dispatch(updateCurrentPage(page));
   };

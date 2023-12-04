@@ -1,11 +1,14 @@
 import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
 import {
   createRecordThunk,
   editRecordThunk,
   deleteRecordThunk,
 } from "./recordThunk";
+import { fetchLocalRecords } from "./allRecordsSlice";
 // Action to store the record locally
+
 export const storeLocally = (record) => {
   try {
     const key = "localRecords";
@@ -131,6 +134,7 @@ const appointmentSlice = createSlice({
         state.localRecords = [...state.localRecords, newData];
         toast.success("Record Created");
         storeLocally(newData);
+
         // console.log("Record Created:", newData);
       })
       .addCase(createRecord.rejected, (state, action) => {

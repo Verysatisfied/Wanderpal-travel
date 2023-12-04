@@ -1,13 +1,15 @@
 import { logoutUser } from "./userSlice";
-import { showLoading, hideLoading } from "./allRecordsSlice";
+import { showLoading, hideLoading, fetchLocalRecords } from "./allRecordsSlice";
 import { storeLocally } from "./appointmentSlice";
 import { deleteRecord } from "./appointmentSlice";
 import { editRecord } from "./appointmentSlice";
+
 export const createRecordThunk = async ({ data }, thunkAPI) => {
   try {
     // console.log("Async Thunk Executed:", data);
     thunkAPI.dispatch(storeLocally({ data }));
     // Return the data so that it can be accessed in createRecord.fulfilled
+
     return data;
   } catch (error) {
     if (error.response && error.response.status === 401) {

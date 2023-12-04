@@ -12,6 +12,7 @@ import {
   clearValues,
   createRecord,
 } from "../../reducers/appointmentSlice";
+import { fetchLocalRecords } from "../../reducers/allRecordsSlice";
 const AddJob = () => {
   const {
     isLoading,
@@ -60,6 +61,7 @@ const AddJob = () => {
     // dispatch(createRecord({ data: recordData, storeLocally: true }));
     dispatch(clearValues());
   };
+
   useEffect(() => {
     if (isEditing) {
       dispatch(
