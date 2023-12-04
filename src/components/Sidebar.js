@@ -36,9 +36,29 @@ export const Sidebar = () => {
             Blog
           </Link>
           {user && (
-            <Link to="/dashboard" onClick={() => dispatch(toggleSidebar())}>
-              Dashboard
-            </Link>
+            <div>
+              <Link to="/dashboard" onClick={() => dispatch(toggleSidebar())}>
+                Stats
+              </Link>
+              <Link
+                to="/dashboard/all-records"
+                onClick={() => dispatch(toggleSidebar())}
+              >
+                all records
+              </Link>
+              <Link
+                to="/dashboard/add-record"
+                onClick={() => dispatch(toggleSidebar())}
+              >
+                add record
+              </Link>
+              <Link
+                to="/dashboard/profile"
+                onClick={() => dispatch(toggleSidebar())}
+              >
+                profile
+              </Link>
+            </div>
           )}
         </ul>
         {!user && (
