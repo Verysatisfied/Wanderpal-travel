@@ -12,7 +12,6 @@ import {
   clearValues,
   createRecord,
 } from "../../reducers/appointmentSlice";
-import { fetchLocalRecords } from "../../reducers/allRecordsSlice";
 const AddJob = () => {
   const {
     isLoading,
