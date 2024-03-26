@@ -5,11 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { updateUser } from "../../reducers/userSlice";
 import { useEffect } from "react";
-import userImageSlice from "../../reducers/userImageSlice";
+
 const Profile = () => {
   const { isLoading, user } = useSelector((store) => store.user);
   const dispatch = useDispatch();
-  const [userData, setUserData] = useState({
+  const [userData] = useState({
     name: user?.name || "",
     email: user?.email || "",
     lastName: user?.lastName || "",
