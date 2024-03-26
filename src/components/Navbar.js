@@ -8,7 +8,7 @@ import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { toggleSidebar } from "../reducers/sidebarReducer";
 
 import { logoutUser } from "../reducers/userSlice";
-
+import "../assets/css/header.css";
 export const Navbar = () => {
   const [showLogout, setShowLogout] = useState(false);
   const isSidebarHidden = useSelector((state) => state.sidebar.isSidebarHidden);
@@ -22,7 +22,7 @@ export const Navbar = () => {
           <Link to="/">
             <img src={logo} alt="we care logo" />
           </Link>
-          <p>we care</p>
+          <p>Wanderpal</p>
           {!isSidebarHidden && (
             <button
               type="button"
@@ -35,7 +35,7 @@ export const Navbar = () => {
         </div>
         <ul className="nav-links">
           <Link to="/">Home</Link> <Link to="/about">About</Link>
-          <Link to="/blog">Blog</Link>
+          {/* <Link to="/blog">Blog</Link> */}
           {user && <Link to="/dashboard">Dashboard</Link>}
         </ul>
         {/* <LoginButtons or user logoutButtons /> */}
@@ -79,10 +79,16 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0;
-  width: 100%;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 调整阴影样式 */
-  margin-bottom: 2px;
+  position: fixed; /* Change position to fixed */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  width: 100%; /* Span the full width of the viewport */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it sits above other content */
+  background: var(--white); /* Define --white or use a specific color */
+  margin-bottom: 20px;
+  transition: background-color 0.3s; /* Optional: for any background transition effect */
+
   .nav-center {
     width: 90vw;
     margin: 0 auto;
@@ -98,15 +104,15 @@ const NavContainer = styled.nav`
       margin-left: -15px;
     }
     p {
-      color: #4a9fe0;
-      font-family: cursive;
+      color: var(--heading-color);
+      font-family: var(--font-name);
       font-size: 1.5rem;
     }
   }
   .nav-toggle {
     background: transparent;
     border: transparent;
-    color: #4a9fe0;
+    color: var(--secondary-color);
     cursor: pointer;
     svg {
       font-size: 2rem;
@@ -115,15 +121,25 @@ const NavContainer = styled.nav`
   .nav-links {
     display: none;
   }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .nav-links a:hover,
+  .nav-links a.active__link {
+    color: var(--secondary-color);
+  }
   .cart-btn-wrapper {
     display: none;
   }
   .cart-btn-wrapper {
     margin: 2rem auto;
     cursor: pointer;
-    color: #2c7db7;
+    color: #faa935;
     &:hover {
-      color: #195b8e;
+      color: #faa935;
     }
   }
 
@@ -149,7 +165,7 @@ const NavContainer = styled.nav`
     top: 40px;
     left: 0;
     width: 100%;
-    background: var(--primary-100);
+    background: #faa935;
     box-shadow: var(--shadow-2);
     padding: 0.5rem;
     text-align: center;
@@ -162,11 +178,25 @@ const NavContainer = styled.nav`
   .dropdown-btn {
     background: transparent;
     border-color: transparent;
-    color: var(--primary-500);
+    color: white;
     letter-spacing: var(--letterSpacing);
     text-transform: capitalize;
     cursor: pointer;
   }
+  .dropdown-btn {
+    background: transparent;
+    border-color: transparent;
+    color: white;
+    letter-spacing: var(--letterSpacing);
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* 添加过渡效果 */
+  }
+
+  .dropdown-btn:hover {
+    color: #000000; /* 鼠标悬浮时的文字色 */
+  }
+
   .logo-text {
     display: none;
     margin: 0;
@@ -193,8 +223,13 @@ const NavContainer = styled.nav`
         letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
-          border-bottom: 2px solid #4a9fe0;
+          border-bottom: 2px solid #faa935;
         }
+      }
+      .nav-header p {
+        margin: 0 auto; /* Center the text */
+        text-align: center; /* Ensure text is centered */
+        flex-grow: 1; /* Allow it to fill space for center alignment */
       }
     }
     .cart-btn-wrapper {

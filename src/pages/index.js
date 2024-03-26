@@ -1,5 +1,6 @@
 import AboutPage from "./About";
-import { Landing } from "./Landing";
+
+import Landing from "./Landing";
 import ErrorPage from "./ErrorPage";
 import BlogPage from "./BlogPage";
 import ProtectedRoute from "./ProtectedRoute";

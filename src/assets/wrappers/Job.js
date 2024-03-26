@@ -47,19 +47,25 @@ const Wrapper = styled.article`
     overflow: hidden;
   }
   .completed-visit {
-    background: #1abc9c;
+    background: #2ecc71;
     color: #fff;
   }
 
-  .pending-visit {
-    background: #f39c12;
+  .planned {
+    background: #3498db;
     color: #fff;
   }
 
-  .pending-test-results {
+  .in-progress {
+    background: #f1c40f;
+    color: #fff;
+  }
+
+  .cancelled {
     background: #e74c3c;
     color: #fff;
   }
+
   .content {
     padding: 1rem 1.5rem;
   }

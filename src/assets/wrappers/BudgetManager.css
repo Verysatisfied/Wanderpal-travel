@@ -1,0 +1,35 @@
+.budget-manager {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.budget-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.budget-form input[type="text"],
+.budget-form input[type="number"] {
+  flex: 1;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.budget-form button {
+  padding: 10px 20px;
+}
+
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.budget-table th,
+.budget-table td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}

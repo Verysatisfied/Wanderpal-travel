@@ -1,6 +1,7 @@
 import React from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import {
   Landing,
   AboutPage,
@@ -17,6 +18,9 @@ import {
   Profile,
   Stats,
   SharedLayout,
+  Group,
+  Accommodation,
+  Transportation,
 } from "./pages/dashboard";
 function App() {
   return (
@@ -43,6 +47,9 @@ function App() {
             <Route path="all-records" element={<AllJobs />} />
             <Route path="add-record" element={<AddJob />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="group" element={<Group />} />
+            <Route path="accommodation" element={<Accommodation />} />
+            <Route path="transportation" element={<Transportation />} />
           </Route>
         </Routes>
         <ToastContainer position="top-center" autoClose={3000} />

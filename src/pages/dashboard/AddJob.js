@@ -112,7 +112,7 @@ const AddJob = () => {
   return (
     <Wrapper>
       <form className="form">
-        <h3>{isEditing ? "edit records" : "add medical records"}</h3>
+        <h3>{isEditing ? "edit records" : "add itinerary records"}</h3>
 
         <div className="form-center">
           {/* date */}
@@ -127,15 +127,16 @@ const AddJob = () => {
           <FormRow
             type="text"
             name="doctor"
-            placeholder="Enter the doctor name"
+            labelText="Activities"
+            placeholder="Enter the Activities"
             value={doctor}
             handleChange={handleJobInput}
           />
           {/* company */}
           <FormRow
             type="text"
-            labelText="Hospital/clinic"
-            placeholder="Enter the institution name"
+            labelText="Attractions"
+            placeholder="Enter the Attractions"
             name="hospital"
             value={hospital}
             handleChange={handleJobInput}
@@ -143,7 +144,7 @@ const AddJob = () => {
           {/* location */}
           <FormRow
             type="text"
-            labelText="Hospital/clinic location"
+            labelText="city/location"
             name="location"
             placeholder="Enter the location"
             value={location}
@@ -159,7 +160,7 @@ const AddJob = () => {
           {/* job type */}
           <FormRowSelect
             name="medicalType"
-            labelText="medical type"
+            labelText="Category of Activities"
             value={medicalType}
             handleChange={handleJobInput}
             list={medicalTypeOptions}
