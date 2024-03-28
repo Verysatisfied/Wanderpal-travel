@@ -1,7 +1,7 @@
 import React from "react";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify"; // Import toast
 import "react-toastify/dist/ReactToastify.css";
-import { useSelector } from "react-redux";
+
 import {
   Landing,
   AboutPage,
@@ -11,6 +11,7 @@ import {
   ProtectedRoute,
   PaymentPage,
 } from "./pages";
+import RequirePayment from "./pages/ProtectedFeatureLink";
 import { Navbar, Sidebar, BlogDetail } from "./components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
@@ -23,9 +24,8 @@ import {
   Accommodation,
   Transportation,
 } from "./pages/dashboard";
-function App() {
-  const { hasPaid } = useSelector((store) => store.payment);
 
+function App() {
   return (
     <Router>
       <div>
@@ -51,14 +51,36 @@ function App() {
             <Route index element={<Stats />} />
             <Route path="all-records" element={<AllJobs />} />
             <Route path="add-record" element={<AddJob />} />
+            {/* <Route path="group" element={<Group />} />
+            <Route path="accommodation" element={<Accommodation />} />
+            <Route path="Transportation" element={<Transportation />} /> */}
+
+            <Route
+              path="group"
+              element={
+                <RequirePayment>
+                  <Group />
+                </RequirePayment>
+              }
+            />
+            <Route
+              path="accommodation"
+              element={
+                <RequirePayment>
+                  <Accommodation />
+                </RequirePayment>
+              }
+            />
+            <Route
+              path="transportation"
+              element={
+                <RequirePayment>
+                  <Transportation />
+                </RequirePayment>
+              }
+            />
+
             <Route path="profile" element={<Profile />} />
-            {hasPaid && (
-              <>
-                <Route path="group" element={<Group />} />
-                <Route path="accommodation" element={<Accommodation />} />
-                <Route path="transportation" element={<Transportation />} />
-              </>
-            )}
           </Route>
         </Routes>
         <ToastContainer position="top-center" autoClose={3000} />
