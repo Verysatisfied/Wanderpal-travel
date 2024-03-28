@@ -11,7 +11,7 @@ const Wrapper = styled.section`
   }
   .form {
     max-width: 400px;
-    border-top: 5px solid var(--primary-500);
+    border-top: 5px solid #faa935;
   }
 
   h3 {
@@ -24,13 +24,25 @@ const Wrapper = styled.section`
   }
   .btn {
     margin-top: 1rem;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+    &:hover {
+      background-color: #e5941a; /* Darker shade for hover */
+      color: white; /* Optional: change text color on hover */
+    }
   }
+
   .member-btn {
     background: transparent;
     border: transparent;
-    color: var(--primary-500);
+    color: #faa935;
     cursor: pointer;
     letter-spacing: var(--letterSpacing);
+    transition: color 0.3s ease; /* Smooth transition for text color */
+
+    &:hover {
+      color: #b5651d;
+    }
   }
 `;
 export default Wrapper;

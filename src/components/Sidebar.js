@@ -32,9 +32,9 @@ export const Sidebar = () => {
           <Link to="/about" onClick={() => dispatch(toggleSidebar())}>
             About
           </Link>
-          <Link to="/blog" onClick={() => dispatch(toggleSidebar())}>
+          {/* <Link to="/blog" onClick={() => dispatch(toggleSidebar())}>
             Blog
-          </Link>
+          </Link> */}
           {user && (
             <div>
               <Link to="/dashboard" onClick={() => dispatch(toggleSidebar())}>
@@ -147,9 +147,9 @@ const SidebarContainer = styled.div`
   .cart-btn-wrapper {
     margin: 2rem auto;
     cursor: pointer;
-    color: #2c7db7;
+    color: #faa935;
     &:hover {
-      color: #195b8e;
+      color: #b5651d;
     }
   }
   @media screen and (min-width: 992px) {

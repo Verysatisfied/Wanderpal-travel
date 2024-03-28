@@ -1,0 +1,34 @@
+.payment-page .hero-section,
+.payment-page .benefits-section,
+.payment-page .pricing-payment {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.payment-page .pricing-column {
+  margin-top: 50px;
+  margin-bottom: 10px; 
+}
+
+.payment-page .card-group {
+  display: flex;
+  justify-content: center;
+  gap: 50px;  
+}
+
+.payment-page .card-header {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.payment-page .btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.payment-page .btn:hover {
+  background-color: #d97300; 
+}

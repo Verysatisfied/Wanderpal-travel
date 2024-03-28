@@ -9,6 +9,7 @@ import {
   BlogPage,
   Register,
   ProtectedRoute,
+  PaymentPage,
 } from "./pages";
 import { Navbar, Sidebar, BlogDetail } from "./components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -34,6 +35,8 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/pay" element={<PaymentPage />} />
+
           <Route path="*" element={<ErrorPage />} />
           <Route
             path="/dashboard"
