@@ -1,7 +1,7 @@
 import React from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { useSelector } from "react-redux";
 import {
   Landing,
   AboutPage,
@@ -24,6 +24,8 @@ import {
   Transportation,
 } from "./pages/dashboard";
 function App() {
+  const { hasPaid } = useSelector((store) => store.payment);
+
   return (
     <Router>
       <div>
@@ -50,9 +52,13 @@ function App() {
             <Route path="all-records" element={<AllJobs />} />
             <Route path="add-record" element={<AddJob />} />
             <Route path="profile" element={<Profile />} />
-            <Route path="group" element={<Group />} />
-            <Route path="accommodation" element={<Accommodation />} />
-            <Route path="transportation" element={<Transportation />} />
+            {hasPaid && (
+              <>
+                <Route path="group" element={<Group />} />
+                <Route path="accommodation" element={<Accommodation />} />
+                <Route path="transportation" element={<Transportation />} />
+              </>
+            )}
           </Route>
         </Routes>
         <ToastContainer position="top-center" autoClose={3000} />

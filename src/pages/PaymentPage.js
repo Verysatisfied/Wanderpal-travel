@@ -1,9 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../assets/wrappers/Payment.css";
 import Footer from "../components/Footer/Footer";
-
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { setPaymentStatus } from "../reducers/paySlice";
 const PaymentPage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user } = useSelector((state) => state.user);
+
+  const handlePayment = () => {
+    if (user) {
+      toast.success("Payment successful!");
+      setTimeout(() => navigate("/dashboard"), 2000); // 2秒后跳转到dashboard
+      dispatch(setPaymentStatus(true));
+    } else {
+      dispatch(setPaymentStatus(true));
+      toast.success("Payment successful!");
+      navigate("/register");
+    }
+  };
   return (
     <div className="payment-page">
       <section className="hero-section">
@@ -73,15 +92,14 @@ const PaymentPage = () => {
                   <p>Exclusive booking options</p>
                   <p>Real-time weather updates</p>
 
-                  <Link to="/dashboard">
-                    <button
-                      className="btn btn-dark pricing-button"
-                      type="button"
-                      style={{ marginTop: "40px" }}
-                    >
-                      Upgrade Now
-                    </button>
-                  </Link>
+                  <button
+                    className="btn btn-dark pricing-button"
+                    type="button"
+                    style={{ marginTop: "40px" }}
+                    onClick={handlePayment}
+                  >
+                    Upgrade Now
+                  </button>
                 </div>
               </div>
             </div>

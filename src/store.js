@@ -6,6 +6,7 @@ import userReducer from "./reducers/userSlice";
 import appointmentSlice from "./reducers/appointmentSlice";
 import allRecordsSlice from "./reducers/allRecordsSlice";
 import userImageSlice from "./reducers/userImageSlice";
+import paySlice from "./reducers/paySlice";
 const store = configureStore({
   reducer: {
     sidebar: sidebarReducer,
@@ -13,6 +14,7 @@ const store = configureStore({
     appointment: appointmentSlice,
     allRecords: allRecordsSlice,
     userImage: userImageSlice,
+    payment: paySlice,
   },
   middleware: [thunk],
 });
