@@ -51,7 +51,7 @@
   display: inline-flex; /* Center content */
   align-items: center; /* Center content */
   justify-content: center; /* Center content */
-  margin-left: 100px; /* Add some spacing */
+  margin-left: 50px; /* Add some spacing */
   margin-right: 10px;
   cursor: pointer; /* Hand cursor on hover */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
