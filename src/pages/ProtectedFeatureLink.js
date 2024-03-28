@@ -2,7 +2,7 @@ import { useEffect, useCallback } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import _ from "lodash"; // Assuming lodash is installed
+import _ from "lodash";
 
 const RequirePayment = ({ children }) => {
   const navigate = useNavigate();
@@ -15,8 +15,8 @@ const RequirePayment = ({ children }) => {
       );
       navigate("/pay");
     }, 500),
-    []
-  ); // 500ms debounce time
+    [navigate] // Add navigate to the dependencies array
+  );
 
   useEffect(() => {
     if (!hasPaid) {
