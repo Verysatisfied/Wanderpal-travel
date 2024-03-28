@@ -15,7 +15,7 @@ const RequirePayment = ({ children }) => {
       );
       navigate("/pay");
     }, 500),
-    [navigate] // Add navigate to the dependencies array
+    [navigate] // Include navigate in the dependencies array
   );
 
   useEffect(() => {
