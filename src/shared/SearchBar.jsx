@@ -7,6 +7,7 @@ import { GrFormSearch } from "react-icons/gr";
 import { CiLocationOn } from "react-icons/ci";
 import { GiPathDistance } from "react-icons/gi";
 import { MdOutlinePeopleOutline } from "react-icons/md";
+import { Link } from "react-router-dom";
 const SearchBar = () => {
   const locationRef = useRef("");
   const distanceRef = useRef(0);
@@ -35,7 +36,9 @@ const SearchBar = () => {
       { state: result.data }
     );
   };
-
+  const navigateToPayPage = () => {
+    navigate("/pay");
+  };
   return (
     <Col lg="12">
       <div className="search__bar">
@@ -87,6 +90,14 @@ const SearchBar = () => {
               <GrFormSearch />
             </i>
           </span>
+          {/* Start Here Button */}
+          <Link
+            to="/pay"
+            onClick={navigateToPayPage}
+            className="start-here-button"
+          >
+            Start Here
+          </Link>
         </Form>
       </div>
     </Col>
