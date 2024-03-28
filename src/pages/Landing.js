@@ -78,7 +78,7 @@ const Landing = () => {
       </section>
 
       {/* ========== FEATURED TOUR SECTION START ========== */}
-      <section>
+      {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="mb-5">
@@ -88,7 +88,7 @@ const Landing = () => {
             <FeaturedTourList />
           </Row>
         </Container>
-      </section>
+      </section> */}
       {/* ========== FEATURED TOUR SECTION END =========== */}
 
       {/* ========== EXPERIENCE SECTION START ============ */}
