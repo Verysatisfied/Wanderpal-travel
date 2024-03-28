@@ -49,6 +49,10 @@ const Footer = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Commodi, enim.
               </p>
+              <p>
+                @{year} <span style={{ color: "#faa935" }}>Wanderpal</span> All
+                right reserved
+              </p>
               <div className="social__link d-flex align-items-center gap-4">
                 <span>
                   <Link to="#">

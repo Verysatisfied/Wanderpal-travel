@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import errorImg from "../assets/images/404.svg";
+import errorImg from "../assets/images/404.jpg";
 const ErrorPage = () => {
   return (
     <Wrapper className="page-100">
@@ -32,6 +32,13 @@ const Wrapper = styled.main`
   h3 {
     text-transform: none;
     margin-bottom: 2rem;
+  }
+  .btn {
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    &:hover {
+      background-color: #faa935; /* Change background color on hover */
+      color: #fff; /* Optional: Change text color on hover if needed */
+    }
   }
 `;
 
