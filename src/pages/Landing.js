@@ -15,7 +15,7 @@ import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
 import NewsLetter from "../shared/Newsletter";
-
+import Footer from "../components/Footer/Footer";
 const Landing = () => {
   return (
     <>
@@ -166,6 +166,7 @@ const Landing = () => {
       </section>
       {/* ========== TESTIMONIAL SECTION END ================== */}
       <NewsLetter />
+      <Footer />
     </>
   );
 };

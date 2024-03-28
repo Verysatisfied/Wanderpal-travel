@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import aboutImg from "../assets/images/aboutImg.svg";
+import aboutImg from "../assets/images/aboutImg.jpg";
 import { FaEnvelope } from "react-icons/fa";
-import { Footer } from "../components";
-
+// import { Footer } from "../components/";
+import Footer from "../components/Footer/Footer";
 const AboutPage = () => {
   return (
     <main>
@@ -15,15 +15,16 @@ const AboutPage = () => {
             <div className="underline"></div>
           </div>
           <p>
-            Discover the story behind WeCare. Our visionary team is committed to
-            revolutionizing health management, providing a platform where every
-            patient's journey is valued and empowered. Our mission is to make
-            healthcare records meaningful, accessible.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Temporibus, dicta? Vitae aliquid ad dolorum dolore omnis veritatis
+            ipsa itaque repellat alias voluptates? Corrupti accusantium
+            voluptate ipsam voluptatum deserunt voluptatem qui!
           </p>
           <p>
-            Join us ! We redefine health management, placing significance on
-            every aspect of your well-being. Your journey to better health
-            starts here.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            ducimus pariatur veniam quos eum maxime similique, placeat, aperiam
+            harum ut assumenda tenetur iste facilis dicta aspernatur incidunt
+            unde adipisci ipsa.
           </p>
           <p className="question-text">
             Got a question?
@@ -33,7 +34,7 @@ const AboutPage = () => {
           </p>
         </article>
       </Wrapper>
-      <Footer />
+      <Footer className="footer" />
     </main>
   );
 };
@@ -73,7 +74,7 @@ const Wrapper = styled.section`
   }
 
   .email-link {
-    color: #4a9fe0;
+    color: #faa935;
     text-decoration: none;
     font-weight: bold;
     margin-left: 0.5rem;
@@ -91,7 +92,7 @@ const Wrapper = styled.section`
   }
 
   .email-link:hover .email-icon {
-    color: #4a9fe0;
+    color: #faa935;
     transform: scale(1.2);
   }
 
