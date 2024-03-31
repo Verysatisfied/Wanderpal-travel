@@ -12,13 +12,16 @@ const ChartsContainer = () => {
     (state) => state.allRecords.stats.monthlyApplications
   );
   const pieChartData = [
-    { name: "Scheduled Appointment", value: stats.scheduledAppointmentCount },
-    { name: "Emergency Visit", value: stats.emergencyVisitCount },
-    { name: "Routine Checkup", value: stats.routineCheckupCount },
+    { name: "Sightseeing", value: stats.scheduledAppointmentCount },
+    { name: "Adventure", value: stats.emergencyVisitCount },
+    { name: "Shopping", value: stats.routineCheckupCount },
+    { name: "Dining", value: stats.DiningCount },
+    { name: "Relaxation", value: stats.RelaxationCount },
+    { name: "Cultural Experience", value: stats.CulturalCount },
   ];
   return (
     <Wrapper>
-      <h4>Medical Type</h4>
+      <h4>Category Of Activities</h4>
       <PieChart data={pieChartData} />
       <h4>Monthly Records</h4>
       <button type="button" onClick={() => setBarChart(!barChart)}>

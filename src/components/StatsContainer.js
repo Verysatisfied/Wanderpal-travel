@@ -1,41 +1,40 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import StatItem from "./StatItem";
-import { FaSuitcaseRolling, FaCalendarCheck, FaBug } from "react-icons/fa";
 import Wrapper from "../assets/wrappers/StatsContainer";
-
+import { FaRegCalendarCheck, FaTools, FaBan, FaRegClock } from "react-icons/fa";
 const StatsContainer = () => {
   const stats = useSelector((state) => state.allRecords.stats);
-
   const defaultStats = [
     {
-      title: "pending Visit ",
+      title: "Planned ",
       count: stats.pendingVisitCount || 0,
-      icon: <FaSuitcaseRolling />,
-      color: "#e9b949",
-      bcg: "#fcefc7",
+      icon: <FaRegClock />, // Represents time or scheduling, fitting for "Planned"
+      color: "#4D96FF", // Bright blue to signify anticipation or planning
+      bcg: "#D6E4FF",
     },
     {
-      title: "pending Test Results ",
+      title: "In Progress ",
       count: stats.pendingTestResultsCount || 0,
-      icon: <FaBug />,
-      color: "#d66a6a",
-      bcg: "#ffeeee",
+      icon: <FaTools />, // Tools icon suggests work being done, suitable for "In Progress"
+      color: "#FFC107", // Amber to signify ongoing work or attention needed
+      bcg: "#FFF3CD",
     },
     {
-      title: "completed Visit ",
+      title: "Completed Visit ",
       count: stats.completedVisitCount || 0,
-      icon: <FaCalendarCheck />,
-      color: "#647acb",
-      bcg: "#e0e8f9",
+      icon: <FaRegCalendarCheck />, // A checkmark in a calendar, appropriate for completed visits
+      color: "#28A745", // Green to signify completion or success
+      bcg: "#D4EDDA",
+    },
+    {
+      title: "Cancelled",
+      count: stats.cancelledCount || 0,
+      icon: <FaBan />, // Ban icon clearly represents cancellation
+      color: "#DC3545", // Red to signify cancellation or stopping
+      bcg: "#F8D7DA",
     },
   ];
-
-  // const pieChartData = [
-  //   { name: "Scheduled Appointment", value: stats.scheduledAppointmentCount },
-  //   { name: "Emergency Visit", value: stats.emergencyVisitCount },
-  //   { name: "Routine Checkup", value: stats.routineCheckupCount },
-  // ];
 
   return (
     <Wrapper>

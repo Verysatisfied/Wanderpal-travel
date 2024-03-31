@@ -130,24 +130,36 @@ export const showStats = createAsyncThunk(
       const data = JSON.parse(localStorage.getItem("localRecords")) || [];
 
       const scheduledAppointmentCount = data.filter(
-        (record) => record.medicalType === "Scheduled Appointment"
+        (record) => record.medicalType === "Sightseeing"
       ).length;
       const emergencyVisitCount = data.filter(
-        (record) => record.medicalType === "Emergency Visit"
+        (record) => record.medicalType === "Adventure"
       ).length;
       const routineCheckupCount = data.filter(
-        (record) => record.medicalType === "Routine Checkup"
+        (record) => record.medicalType === "Shopping"
       ).length;
+      const DiningCount = data.filter(
+        (record) => record.medicalType === "Dining"
+      ).length;
+      const RelaxationCount = data.filter(
+        (record) => record.medicalType === "Relaxation"
+      ).length;
+      const CulturalCount = data.filter(
+        (record) => record.medicalType === "Cultural Experience"
+      ).length;
+
       const completedVisitCount = data.filter(
         (record) => record.status === "Completed Visit"
       ).length;
       const pendingVisitCount = data.filter(
-        (record) => record.status === "Pending Visit"
+        (record) => record.status === "Planned"
       ).length;
       const pendingTestResultsCount = data.filter(
-        (record) => record.status === "Pending Test Results"
+        (record) => record.status === "In Progress"
       ).length;
-
+      const cancelledCount = data.filter(
+        (record) => record.status === "Cancelled"
+      ).length;
       // Calculate the total records for each month using a plain JavaScript object
       const monthlyApplications = {};
 
@@ -181,7 +193,11 @@ export const showStats = createAsyncThunk(
         completedVisitCount,
         pendingVisitCount,
         pendingTestResultsCount,
+        cancelledCount,
         monthlyApplications,
+        DiningCount,
+        RelaxationCount,
+        CulturalCount,
       };
     } catch (error) {
       console.error("Error fetching and calculating stats:", error);
