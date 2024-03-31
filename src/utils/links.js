@@ -5,6 +5,7 @@ import { ImProfile } from "react-icons/im";
 import { MdOutlineGroups } from "react-icons/md";
 import { RiHotelLine } from "react-icons/ri";
 import { IoCarOutline } from "react-icons/io5";
+import { IoMapOutline } from "react-icons/io5";
 const links = [
   {
     id: 1,
@@ -42,6 +43,12 @@ const links = [
     text: "Book Transportation",
     path: "transportation",
     icon: <IoCarOutline />,
+  },
+  {
+    id: 8,
+    text: "Map",
+    path: "map",
+    icon: <IoMapOutline />,
   },
   {
     id: 4,

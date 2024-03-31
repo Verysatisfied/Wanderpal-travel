@@ -6,7 +6,9 @@ import SharedLayout from "./SharedLayout";
 import Group from "./Group";
 import Accommodation from "./Accommodation";
 import Transportation from "./Transportation";
+import Map from "./Map";
 export {
+  Map,
   AddJob,
   AllJobs,
   Profile,

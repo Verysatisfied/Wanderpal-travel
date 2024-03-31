@@ -23,6 +23,7 @@ import {
   Group,
   Accommodation,
   Transportation,
+  Map,
 } from "./pages/dashboard";
 
 function App() {
@@ -79,7 +80,14 @@ function App() {
                 </RequirePayment>
               }
             />
-
+            <Route
+              path="map"
+              element={
+                <RequirePayment>
+                  <Map />
+                </RequirePayment>
+              }
+            />
             <Route path="profile" element={<Profile />} />
           </Route>
         </Routes>
