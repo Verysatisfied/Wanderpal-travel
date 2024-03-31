@@ -5,23 +5,19 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-routing-machine";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
+import styled from "styled-components";
 function Routing({ startCoords, endCoords }) {
   const map = useMap();
-
   useEffect(() => {
     if (!map) return;
-
     const routingControl = L.Routing.control({
       waypoints: [L.latLng(...startCoords), L.latLng(...endCoords)],
       routeWhileDragging: true,
     }).addTo(map);
-
     return () => routingControl.remove();
   }, [map, startCoords, endCoords]);
-
   return null;
 }
-
 function TravelMap() {
   const defaultStart = [51.897426, -8.486562]; // Fitzgerald's Park
   const defaultEnd = [51.8928, -8.4894]; // University College Cork
@@ -40,7 +36,6 @@ function TravelMap() {
     }
     return null;
   };
-
   // 处理“搜索”按钮点击事件
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -51,24 +46,24 @@ function TravelMap() {
       mapRef.current.flyTo(startCoords, 13); // 将地图中心移动到起点
     }
   };
-
   return (
     <>
-      <form onSubmit={handleSearch}>
-        <input
+      <Form onSubmit={handleSearch}>
+        <Input
           type="text"
           value={startLocation}
           onChange={(e) => setStartLocation(e.target.value)}
           placeholder="Start Location"
         />
-        <input
+        <Input
           type="text"
           value={endLocation}
           onChange={(e) => setEndLocation(e.target.value)}
           placeholder="End Location"
         />
-        <button type="submit">Search</button>
-      </form>
+
+        <SearchButton type="submit">Search</SearchButton>
+      </Form>
       <MapContainer
         center={[51.505, -0.09]} // 初始中心点，您可以更改为科克市或其他位置
         zoom={13}
@@ -89,5 +84,32 @@ function TravelMap() {
     </>
   );
 }
-
 export default TravelMap;
+
+const SearchButton = styled.button`
+  background-color: #faa935;
+  color: white;
+  padding: 10px 10px; /* Adjust padding to add space on the left */
+  margin-left: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: gold; /* Change hover color */
+  }
+`;
+
+const Form = styled.form`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+`;
+
+const Input = styled.input`
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+`;
