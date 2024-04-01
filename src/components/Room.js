@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import defaultImg from "../assets/hotelImages/room-1.jpeg";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-
+import { toast } from "react-toastify";
 // Styled components for Room
 const RoomWrapper = styled.article`
   box-shadow: var(--lightShadow);
@@ -98,7 +98,12 @@ export default function Room({ room }) {
         {/* <RoomLink to={`/rooms/${slug}`} className="btn-primary room-link">
           Feature
         </RoomLink> */}
-        <RoomLink to={`/rooms/${slug}`} className="btn-primary room-link">
+        <RoomLink
+          onClick={() => {
+            toast.success("Book successfully!");
+          }}
+          className="btn-primary room-link"
+        >
           Book
         </RoomLink>
       </ImgContainer>

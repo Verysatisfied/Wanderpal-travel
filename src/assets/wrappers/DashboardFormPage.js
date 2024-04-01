@@ -60,8 +60,12 @@ const Wrapper = styled.section`
     column-gap: 1rem;
     align-self: flex-end;
     margin-top: 0.5rem;
+    /* background-color: #faa935; */
     button {
       height: 35px;
+    }
+    &:hover {
+      background-color: gold; /* Change hover color */
     }
   }
   .clear-btn {

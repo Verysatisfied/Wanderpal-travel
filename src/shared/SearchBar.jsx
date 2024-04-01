@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "./search-bar.css";
+import { toast } from "react-toastify";
 import { Col, Form, FormGroup } from "reactstrap";
 import { BASE_URL } from "../utils/config";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +21,7 @@ const SearchBar = () => {
     const maxGroupSize = maxGroupSizeRef.current.value;
 
     if (location === "" || distance === "" || maxGroupSize === "") {
-      return alert("All fields are required!");
+      return toast.error("All fields are required!");
     }
 
     const res = await fetch(
@@ -84,12 +85,18 @@ const SearchBar = () => {
               <input type="number" placeholder="0" ref={maxGroupSizeRef} />
             </div>
           </FormGroup>
+          <Link to="/dashboard/accommodation" className="start-here-button">
+            <span
+              className="search__icon"
+              type="submit"
+              onClick={searchHandler}
+            >
+              <i className="ri-search-line">
+                <GrFormSearch />
+              </i>
+            </span>
+          </Link>
 
-          <span className="search__icon" type="submit" onClick={searchHandler}>
-            <i className="ri-search-line">
-              <GrFormSearch />
-            </i>
-          </span>
           {/* Start Here Button */}
           <Link
             to="/pay"

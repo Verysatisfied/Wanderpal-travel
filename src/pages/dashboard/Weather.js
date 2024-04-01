@@ -80,7 +80,7 @@ function Weather() {
         <CityComponent
           updateCity={updateCity}
           fetchWeather={fetchWeather}
-          searchClicked={searchClicked} // Pass searchClicked state to CityComponent
+          searchClicked={searchClicked}
         />
       )}
     </Container>

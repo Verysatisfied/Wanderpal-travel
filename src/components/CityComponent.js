@@ -19,7 +19,7 @@ const SearchBox = styled.form`
     font-weight: bold;
   }
   & button {
-    background-color: black;
+    background-color: #faa935;
     font-size: 14px;
     padding: 0 10px;
     color: white;
@@ -28,6 +28,9 @@ const SearchBox = styled.form`
     cursor: pointer;
     font-family: Montserrat;
     font-weight: bold;
+    &:hover {
+      background-color: gold; /* Change hover color */
+    }
   }
 `;
 const ChooseCityLabel = styled.span`

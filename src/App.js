@@ -53,9 +53,7 @@ function App() {
             <Route index element={<Stats />} />
             <Route path="all-records" element={<AllJobs />} />
             <Route path="add-record" element={<AddJob />} />
-            {/* <Route path="group" element={<Group />} />
-            <Route path="accommodation" element={<Accommodation />} />
-            <Route path="Transportation" element={<Transportation />} /> */}
+
             <Route
               path="group"
               element={
@@ -64,14 +62,7 @@ function App() {
                 </RequirePayment>
               }
             />
-            <Route
-              path="accommodation"
-              element={
-                <RequirePayment>
-                  <Accommodation />
-                </RequirePayment>
-              }
-            />
+            <Route path="accommodation" element={<Accommodation />} />
             <Route
               path="transportation"
               element={
