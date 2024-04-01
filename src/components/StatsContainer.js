@@ -9,29 +9,29 @@ const StatsContainer = () => {
     {
       title: "Planned ",
       count: stats.pendingVisitCount || 0,
-      icon: <FaRegClock />, // Represents time or scheduling, fitting for "Planned"
-      color: "#4D96FF", // Bright blue to signify anticipation or planning
+      icon: <FaRegClock />,
+      color: "#4D96FF",
       bcg: "#D6E4FF",
     },
     {
       title: "In Progress ",
       count: stats.pendingTestResultsCount || 0,
-      icon: <FaTools />, // Tools icon suggests work being done, suitable for "In Progress"
-      color: "#FFC107", // Amber to signify ongoing work or attention needed
+      icon: <FaTools />,
+      color: "#FFC107",
       bcg: "#FFF3CD",
     },
     {
       title: "Completed Visit ",
       count: stats.completedVisitCount || 0,
-      icon: <FaRegCalendarCheck />, // A checkmark in a calendar, appropriate for completed visits
-      color: "#28A745", // Green to signify completion or success
+      icon: <FaRegCalendarCheck />,
+      color: "#28A745",
       bcg: "#D4EDDA",
     },
     {
       title: "Cancelled",
       count: stats.cancelledCount || 0,
-      icon: <FaBan />, // Ban icon clearly represents cancellation
-      color: "#DC3545", // Red to signify cancellation or stopping
+      icon: <FaBan />,
+      color: "#DC3545",
       bcg: "#F8D7DA",
     },
   ];

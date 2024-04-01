@@ -6,6 +6,7 @@ import { MdOutlineGroups } from "react-icons/md";
 import { RiHotelLine } from "react-icons/ri";
 import { IoCarOutline } from "react-icons/io5";
 import { IoMapOutline } from "react-icons/io5";
+import { IoPartlySunnyOutline } from "react-icons/io5";
 const links = [
   {
     id: 1,
@@ -49,6 +50,12 @@ const links = [
     text: "Map",
     path: "map",
     icon: <IoMapOutline />,
+  },
+  {
+    id: 8,
+    text: "Weather",
+    path: "weather",
+    icon: <IoPartlySunnyOutline />,
   },
   {
     id: 4,

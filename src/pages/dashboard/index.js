@@ -7,6 +7,7 @@ import Group from "./Group";
 import Accommodation from "./Accommodation";
 import Transportation from "./Transportation";
 import Map from "./Map";
+import Weather from "./Weather";
 export {
   Map,
   AddJob,
@@ -17,4 +18,5 @@ export {
   Group,
   Accommodation,
   Transportation,
+  Weather,
 };

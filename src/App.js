@@ -24,6 +24,7 @@ import {
   Accommodation,
   Transportation,
   Map,
+  Weather,
 } from "./pages/dashboard";
 
 function App() {
@@ -55,7 +56,6 @@ function App() {
             {/* <Route path="group" element={<Group />} />
             <Route path="accommodation" element={<Accommodation />} />
             <Route path="Transportation" element={<Transportation />} /> */}
-
             <Route
               path="group"
               element={
@@ -85,6 +85,14 @@ function App() {
               element={
                 <RequirePayment>
                   <Map />
+                </RequirePayment>
+              }
+            />
+            <Route
+              path="weather"
+              element={
+                <RequirePayment>
+                  <Weather />
                 </RequirePayment>
               }
             />

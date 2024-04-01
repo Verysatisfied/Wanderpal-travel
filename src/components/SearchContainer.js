@@ -17,14 +17,14 @@ const SearchContainer = () => {
   const handleSearch = (e) => {
     if (isLoading) return;
     dispatch(handleChange({ name: e.target.name, value: e.target.value }));
-    // Dispatch fetchLocalRecords to update records based on the new search criteria
+
     dispatch(fetchLocalRecords());
     dispatch(updateCurrentPage(1));
   };
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(clearFilters());
-    dispatch(fetchLocalRecords()); // Also fetch records when filters are cleared
+    dispatch(fetchLocalRecords());
   };
   return (
     <Wrapper>
@@ -37,7 +37,7 @@ const SearchContainer = () => {
             type="text"
             name="search"
             value={search}
-            placeholder={"Search by doctor/hospital/note"}
+            placeholder={"Search by Activities/Attractions/Note"}
             handleChange={handleSearch}
           />
           {/* search by status */}
