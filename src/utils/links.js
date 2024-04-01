@@ -28,12 +28,6 @@ const links = [
   },
 
   {
-    id: 5,
-    text: "Trip Group",
-    path: "group",
-    icon: <MdOutlineGroups />,
-  },
-  {
     id: 6,
     text: "Book Accommodation",
     path: "accommodation",
@@ -52,10 +46,16 @@ const links = [
     icon: <IoMapOutline />,
   },
   {
-    id: 8,
+    id: 9,
     text: "Weather",
     path: "weather",
     icon: <IoPartlySunnyOutline />,
+  },
+  {
+    id: 5,
+    text: "Trip Group",
+    path: "group",
+    icon: <MdOutlineGroups />,
   },
   {
     id: 4,

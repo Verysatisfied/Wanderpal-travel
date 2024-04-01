@@ -59,11 +59,11 @@ export const Sidebar = () => {
                 map
               </Link>
               <Link
-                to="/dashboard/group"
+                to="/dashboard/weather"
                 onClick={() => dispatch(toggleSidebar())}
               >
-                Group
-              </Link>{" "}
+                Weather
+              </Link>
               <Link
                 to="/dashboard/accommodation"
                 onClick={() => dispatch(toggleSidebar())}
@@ -77,10 +77,10 @@ export const Sidebar = () => {
                 Transportation
               </Link>
               <Link
-                to="/dashboard/weather"
+                to="/dashboard/group"
                 onClick={() => dispatch(toggleSidebar())}
               >
-                Weather
+                Group
               </Link>
               <Link
                 to="/dashboard/profile"
