@@ -16,7 +16,7 @@ export const Sidebar = () => {
         className={`${isSidebarHidden ? "sidebar show-sidebar" : "sidebar"}`}
       >
         <div className="sidebar-header">
-          <img src={logo} alt=" we care " className="logo" />
+          <img src={logo} alt=" Wandelpal " className="logo" />
           <button
             className="close-btn"
             type="button"
@@ -53,6 +53,36 @@ export const Sidebar = () => {
                 add record
               </Link>
               <Link
+                to="/dashboard/map"
+                onClick={() => dispatch(toggleSidebar())}
+              >
+                map
+              </Link>
+              <Link
+                to="/dashboard/group"
+                onClick={() => dispatch(toggleSidebar())}
+              >
+                Group
+              </Link>{" "}
+              <Link
+                to="/dashboard/accommodation"
+                onClick={() => dispatch(toggleSidebar())}
+              >
+                Accommodation
+              </Link>
+              <Link
+                to="/dashboard/transportation"
+                onClick={() => dispatch(toggleSidebar())}
+              >
+                Transportation
+              </Link>
+              <Link
+                to="/dashboard/weather"
+                onClick={() => dispatch(toggleSidebar())}
+              >
+                Weather
+              </Link>
+              <Link
                 to="/dashboard/profile"
                 onClick={() => dispatch(toggleSidebar())}
               >
@@ -86,6 +116,7 @@ const SidebarContainer = styled.div`
 
   .sidebar-header {
     display: flex;
+    margin-top: 100px;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
