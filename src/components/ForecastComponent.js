@@ -17,22 +17,30 @@ const ForecastList = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @media (max-width: 580px) {
+    justify-content: center;
+  }
 `;
 
 const ForecastItem = styled.div`
   margin-bottom: 50px;
-  padding: 35px; /* 调整预报项目的内边距 */
+  padding: 45px;
   border: 1px solid #ccc;
-  border-radius: 10px; /* 增加预报项目的圆角 */
-  width: calc(20% - 20px); // 设置每个预报项目的宽度
+  border-radius: 10px;
+  width: calc(20% - 20px);
   box-sizing: border-box;
+  min-width: 190px;
+  /* 设置框的最小宽度 */
+  max-width: 300px;
+  /* 设置框的最大宽度 */
 
   @media (max-width: 768px) {
-    width: calc(50% - 20px);
+    width: calc(25% - 20px);
   }
-  p {
-    margin-bottom: 10px;
-    white-space: nowrap;
+
+  img {
+    display: block;
+    margin: 0 auto;
   }
 `;
 const BackButton = styled.button`
@@ -67,27 +75,30 @@ function ForecastComponent({ forecastWeather, goBack }) {
               alt={forecast.weather[0].description}
             />
             <p>
-              <FaCalendarAlt /> {forecast.dt_txt.split(" ")[0]}
+              {/* <FaCalendarAlt /> */}
+              {forecast.dt_txt.split(" ")[0]}
             </p>
             <p>
               <FaThermometerHalf />
               {Math.round(forecast.main.temp - 273.15)}°C
             </p>
             <p>
-              <FaCloudRain /> Chance of Rain: {Math.round(forecast.pop * 100)}%
+              <FaCloudRain />
+              {Math.round(forecast.pop * 100)}%
             </p>
 
             <div>
               <FaTint />
-              <span>Humidity: {forecast.main.humidity}%</span>
+              <span>{forecast.main.humidity}%</span>
             </div>
             <div>
               <FaWind />
-              <span>Wind: {forecast.wind.speed} m/s</span>
+
+              <span>{forecast.wind.speed} m/s</span>
             </div>
           </ForecastItem>
         ))}
-      </ForecastList>{" "}
+      </ForecastList>
       <BackButton onClick={goBack}>
         <FaArrowLeft /> Back to Weather
       </BackButton>
