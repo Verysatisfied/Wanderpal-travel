@@ -64,9 +64,9 @@ const Wrapper = styled.section`
     button {
       height: 35px;
     }
-    &:hover {
-      background-color: gold; /* Change hover color */
-    }
+    /* &:hover {
+      background-color: gold;  
+    } */
   }
   .clear-btn {
     background: var(--grey-500);
