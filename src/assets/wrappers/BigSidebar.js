@@ -55,7 +55,7 @@ const Wrapper = styled.aside`
       color: var(--grey-900);
     }
     .nav-link:hover .icon {
-      color: var(--primary-500);
+      color: #faa935;
     }
     .icon {
       font-size: 1.5rem;
@@ -68,7 +68,7 @@ const Wrapper = styled.aside`
       color: var(--grey-900);
     }
     .active .icon {
-      color: var(--primary-500);
+      color: #faa935;
     }
   }
 `;
