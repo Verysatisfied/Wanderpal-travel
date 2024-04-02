@@ -16,7 +16,7 @@ const RoomsListCenter = styled.div`
   grid-column-gap: 30px;
   overflow-x: hidden;
 
-  @media screen and (min-width: 776px) {
+  @media screen and (max-width: 776px) {
     width: 90vw;
   }
 

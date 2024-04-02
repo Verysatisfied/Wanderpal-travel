@@ -106,7 +106,7 @@ const TransportationSearchBar = () => {
   return (
     <Wrapper>
       <form onSubmit={handleSubmit}>
-        <h3>Seach Transportation</h3>
+        <h3>Search Transportation</h3>
 
         <div className="form-center">
           <FormRow
