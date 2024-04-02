@@ -50,7 +50,14 @@ function App() {
               </ProtectedRoute>
             }
           >
-            <Route index element={<Stats />} />
+            <Route
+              index
+              element={
+                <RequirePayment>
+                  <Stats />
+                </RequirePayment>
+              }
+            />
             <Route path="all-records" element={<AllJobs />} />
             <Route path="add-record" element={<AddJob />} />
 
@@ -87,7 +94,14 @@ function App() {
                 </RequirePayment>
               }
             />
-            <Route path="profile" element={<Profile />} />
+            <Route
+              path="profile"
+              element={
+                <RequirePayment>
+                  <Profile />
+                </RequirePayment>
+              }
+            />
           </Route>
         </Routes>
         <ToastContainer position="top-center" autoClose={3000} />
