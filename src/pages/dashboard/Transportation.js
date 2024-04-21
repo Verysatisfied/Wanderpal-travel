@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 // Assuming you're using redux, else adjust as necessary
-import transportationImg from "../../assets/designedImg/transportation.jpg";
 import { FormRow, FormRowSelect } from "../../components";
 const Wrapper = styled.section`
   border-radius: var(--borderRadius);
@@ -159,11 +158,6 @@ const TransportationSearchBar = () => {
             </button>
           </div>
         </div>
-        <img
-          src={transportationImg}
-          alt="Transportation"
-          style={{ width: "100%", height: "auto", marginTop: "30px" }}
-        />
       </form>
     </Wrapper>
   );
