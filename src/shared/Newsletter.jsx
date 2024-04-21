@@ -67,8 +67,9 @@ const NewsLetter = () => {
               </form>
               {state.succeeded && <p>Thanks for joining!</p>}
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati adipisici sunt in, provident facere ipsam?
+                Get the latest travel deals, expert tips, and destination
+                inspiration directly to your inbox. Subscribe to our newsletter
+                today and start crafting unforgettable journeys!
               </p>
             </div>
           </Col>

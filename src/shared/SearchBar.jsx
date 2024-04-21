@@ -55,7 +55,7 @@ const SearchBar = () => {
               <h6>Departure</h6>
               <input
                 type="text"
-                placeholder="Enter your departure location"
+                placeholder="Where do you start?"
                 ref={locationRef}
               />
             </div>

@@ -10,6 +10,7 @@ import {
   Register,
   ProtectedRoute,
   PaymentPage,
+  Manage,
 } from "./pages";
 import RequirePayment from "./pages/ProtectedFeatureLink";
 import { Navbar, Sidebar, BlogDetail } from "./components";
@@ -40,7 +41,7 @@ function App() {
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/register" element={<Register />} />
           <Route path="/pay" element={<PaymentPage />} />
-
+          <Route path="/manage" element={<Manage />} />
           <Route path="*" element={<ErrorPage />} />
           <Route
             path="/dashboard"
