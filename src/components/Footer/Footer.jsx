@@ -45,10 +45,7 @@ const Footer = () => {
             <div className="logo">
               <img src={logo} alt="" />
               JourneyMate
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Commodi, enim.
-              </p>
+              <p>Journey Awaits – Let's Map It Out Together!</p>
               <p>
                 @{year} <span style={{ color: "#faa935" }}>JourneyMate</span>{" "}
                 All right reserved
@@ -122,7 +119,7 @@ const Footer = () => {
                   Email:
                 </h6>
 
-                <p className="mb-0">Hibeautiful@falseMail.com</p>
+                <p className="mb-0">JourneyMate@falseMail.com</p>
               </ListGroupItem>
 
               <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
@@ -133,7 +130,7 @@ const Footer = () => {
                   Phone:
                 </h6>
 
-                <p className="mb-0">123</p>
+                <p className="mb-0">123456789</p>
               </ListGroupItem>
             </ListGroup>
           </Col>
