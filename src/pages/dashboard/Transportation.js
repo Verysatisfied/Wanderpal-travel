@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 // Assuming you're using redux, else adjust as necessary
-import { useDispatch } from "react-redux";
+import transportationImg from "../../assets/designedImg/transportation.jpg";
 import { FormRow, FormRowSelect } from "../../components";
 const Wrapper = styled.section`
   border-radius: var(--borderRadius);
@@ -85,7 +85,6 @@ const TransportationSearchBar = () => {
     date: "",
     transportationType: "bus",
   });
-  const dispatch = useDispatch();
 
   // Handlers
   const handleChange = (e) => {
@@ -107,7 +106,6 @@ const TransportationSearchBar = () => {
     <Wrapper>
       <form onSubmit={handleSubmit}>
         <h3>Search Transportation</h3>
-
         <div className="form-center">
           <FormRow
             type="text"
@@ -134,7 +132,6 @@ const TransportationSearchBar = () => {
             placeholder="Enter notes (less than 20 words)"
           />
           <FormRow type="date" labelText="Date" name="date" />
-
           <FormRowSelect
             labelText="Transportation Type"
             name="transportationType"
@@ -142,7 +139,6 @@ const TransportationSearchBar = () => {
             handleChange={handleChange}
             list={transportationOptions}
           />
-
           <div className="btn-container">
             <button
               type="button"
@@ -163,6 +159,11 @@ const TransportationSearchBar = () => {
             </button>
           </div>
         </div>
+        <img
+          src={transportationImg}
+          alt="Transportation"
+          style={{ width: "100%", height: "auto", marginTop: "30px" }}
+        />
       </form>
     </Wrapper>
   );

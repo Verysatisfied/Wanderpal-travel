@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaTint, FaWind } from "react-icons/fa";
-import { FaCalendarAlt, FaThermometerHalf, FaCloudRain } from "react-icons/fa"; // Import icons
+import { FaThermometerHalf, FaCloudRain } from "react-icons/fa"; // Import icons
 import { FaArrowLeft } from "react-icons/fa"; // Import the back arrow icon
 
 // Styled Components

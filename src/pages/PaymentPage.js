@@ -27,12 +27,12 @@ const PaymentPage = () => {
     <div className="payment-page">
       <section className="hero-section">
         <h1 style={{ textAlign: "center" }}>
-          Unlock the full potential of your travels with Wanderpal Premium
+          Unlock the full potential of your travels with JourneyMate Premium
         </h1>
       </section>
 
       <section className="pricing-payment" style={{ textAlign: "center" }}>
-        <h2>Explore Wanderpal Plans</h2>
+        <h2>Explore JourneyMate Plans</h2>
         <div className="row">
           <div className="card-group text-center">
             {/* Keep the original card design as you liked */}

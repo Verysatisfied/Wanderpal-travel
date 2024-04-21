@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import sunsetIcon from "../assets/icons/temp.svg";
 import sunriseIcon from "../assets/icons/temp.svg";
 import humidityIcon from "../assets/icons/humidity.svg";
@@ -106,16 +105,7 @@ const InfoLabel = styled.span`
     text-transform: capitalize;
   }
 `;
-const BackButton = styled.button`
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-`;
+
 const WeatherInfoComponent = (props) => {
   const { name, value } = props;
   return (

@@ -85,7 +85,7 @@ const RoomInfo = styled.p`
 `;
 
 export default function Room({ room }) {
-  const { name, slug, images, price } = room;
+  const { name, images, price } = room;
 
   return (
     <RoomWrapper>

@@ -28,9 +28,7 @@ export default function RoomFilter({ rooms }) {
     checkInDate: "",
     checkOutDate: "",
   });
-  const [location, setLocation] = useState("");
-  const [checkInDate, setCheckInDate] = useState("");
-  const [checkOutDate, setCheckOutDate] = useState("");
+
   // Handler for input changes
   const handleDataChange = (e) => {
     const { name, value } = e.target;

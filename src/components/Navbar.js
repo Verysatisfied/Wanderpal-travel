@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
 import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { toggleSidebar } from "../reducers/sidebarReducer";
-
 import { logoutUser } from "../reducers/userSlice";
 import "../assets/css/header.css";
 export const Navbar = () => {
@@ -22,7 +21,7 @@ export const Navbar = () => {
           <Link to="/">
             <img src={logo} alt="we care logo" />
           </Link>
-          <p>Wanderpal</p>
+          <p>JourneyMate</p>
           {!isSidebarHidden && (
             <button
               type="button"

@@ -9,11 +9,16 @@ const Wrapper = styled.section`
     margin: 0 auto;
     margin-bottom: 1.38rem;
   }
+
   .form {
     max-width: 400px;
     border-top: 5px solid #faa935;
   }
-
+  h2 {
+    color: #faa935;
+    text-align: center;
+    margin-bottom: 30px;
+  }
   h3 {
     text-align: center;
   }

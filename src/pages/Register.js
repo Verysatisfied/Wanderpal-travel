@@ -1,35 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Logo, FormRow } from "../components";
-import { useState, useEffect } from "react";
 import Wrapper from "../assets/wrappers/RegisterPage";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser, registerUser } from "../reducers/userSlice";
 import { useNavigate } from "react-router-dom";
+
 const initialState = {
   name: "",
   email: "",
   password: "",
   isMember: true,
 };
+
 const Register = () => {
   const [values, setValues] = useState(initialState);
   const dispatch = useDispatch();
-  const { isLoading, user } = useSelector((store) => store.user);
-
+  const { isLoading } = useSelector((store) => store.user);
   const navigate = useNavigate();
-  useEffect(() => {
-    if (user) {
-      setTimeout(() => {
-        navigate("/dashboard");
-      }, 3000);
-    }
-  }, [user, navigate]);
 
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-
     setValues({ ...values, [name]: value });
   };
 
@@ -40,12 +32,47 @@ const Register = () => {
       toast.error("Please Fill Out All Fields");
       return;
     }
+
     if (isMember) {
-      dispatch(loginUser({ email: email, password: password }));
-      return;
+      dispatch(registerUser({ name, email, password }))
+        .unwrap()
+        .then(() => {
+          navigate("/dashboard");
+          toast.success("Login successful!");
+        })
+        .catch((error) => {
+          toast.error(error);
+        });
+    } else {
+      dispatch(registerUser({ name, email, password }))
+        .unwrap()
+        .then(() => {
+          navigate("/dashboard");
+          toast.success("Registration successful!");
+        })
+        .catch((error) => {
+          toast.error(error);
+        });
     }
-    dispatch(registerUser({ name, email, password }));
   };
+
+  const handleDemoLogin = () => {
+    const demoCredentials = {
+      name: "test user",
+      email: "demo@user.com",
+      password: "password",
+    };
+    dispatch(registerUser(demoCredentials))
+      .unwrap()
+      .then(() => {
+        navigate("/dashboard");
+        toast.success("Demo login successful!");
+      })
+      .catch((error) => {
+        toast.error("Demo login failed");
+      });
+  };
+
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
   };
@@ -53,48 +80,42 @@ const Register = () => {
   return (
     <Wrapper className="full-page">
       <form className="form" onSubmit={handleSubmit}>
-        <Logo />
-        <h3>{values.isMember ? "Login" : "register"}</h3>
-        {/* name field */}
-        {!values.isMember && (
-          <FormRow
-            type="text"
-            name="name"
-            value={values.name}
-            handleChange={handleChange}
-          />
-        )}
-        {/* email field */}
+        {/* <Logo style={{ width: "50px", height: "auto" }} /> */}
+        <h2>JourneyMate</h2>
+        <h3>{values.isMember ? "Login" : "Register"}</h3>
+
+        <FormRow
+          type="text"
+          name="name"
+          value={values.name}
+          handleChange={handleChange}
+        />
+
         <FormRow
           type="email"
           name="email"
           value={values.email}
           handleChange={handleChange}
         />
-        {/* password field */}
         <FormRow
           type="password"
           name="password"
           value={values.password}
           handleChange={handleChange}
         />
-        <button type="submit" className="btn btn-block">
-          submit
+        <button type="submit" className="btn btn-block" disabled={isLoading}>
+          Submit
         </button>
         <button
           type="button"
           className="btn btn-block btn-hipster"
           disabled={isLoading}
-          onClick={() => {
-            dispatch(
-              loginUser({ email: "testUser@test.com", password: "secret" })
-            );
-          }}
+          onClick={handleDemoLogin}
         >
-          {isLoading ? "loading..." : "demo"}
+          Demo
         </button>
         <p>
-          {values.isMember ? "Not a mebmer yet ? " : "Already a member?"}
+          {values.isMember ? "Not a member yet?" : "Already a member?"}
           <button type="button" onClick={toggleMember} className="member-btn">
             {values.isMember ? "Register" : "Login"}
           </button>

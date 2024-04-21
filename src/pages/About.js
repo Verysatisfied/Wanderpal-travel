@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import aboutImg from "../assets/images/aboutImg.jpg";
+// import aboutImg from "../assets/images/aboutImg.jpg";
+import home2 from "../assets/designedImg/home1.png";
 import { FaEnvelope } from "react-icons/fa";
 // import { Footer } from "../components/";
 import Footer from "../components/Footer/Footer";
@@ -8,7 +9,7 @@ const AboutPage = () => {
   return (
     <main>
       <Wrapper className="page section section-center">
-        <img src={aboutImg} alt="doctor" />
+        <img src={home2} alt="JourneyMate" style={{ height: "auto" }} />
         <article>
           <div className="title">
             <h2>our story</h2>

@@ -22,7 +22,7 @@ const quick__links = [
 const quick__links2 = [
   {
     path: "/pay",
-    display: "Wanderpal Premium",
+    display: "JourneyMate  Premium",
   },
   {
     path: "/register",
@@ -44,14 +44,14 @@ const Footer = () => {
           <Col lg="3">
             <div className="logo">
               <img src={logo} alt="" />
-              Wanderpal
+              JourneyMate
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Commodi, enim.
               </p>
               <p>
-                @{year} <span style={{ color: "#faa935" }}>Wanderpal</span> All
-                right reserved
+                @{year} <span style={{ color: "#faa935" }}>JourneyMate</span>{" "}
+                All right reserved
               </p>
               <div className="social__link d-flex align-items-center gap-4">
                 <span>

@@ -2,15 +2,17 @@ import React from "react";
 import "../assets/css/home.css";
 import "../App.css";
 import { Container, Row, Col } from "reactstrap";
-import heroImg from "../assets/images/hero-img01.jpg";
-import heroImg02 from "../assets/images/hero-img02.jpg";
-import heroVideo from "../assets/images/hero-video.mp4";
+// import heroImg from "../assets/images/hero-img01.jpg";
+// import heroImg02 from "../assets/images/hero-img02.jpg";
+// import heroVideo from "../assets/images/hero-video.mp4";
+import home1 from "../assets/designedImg/home1.png";
+import home2 from "../assets/designedImg/home2.png";
+
 import worldImg from "../assets/images/world.png";
-import experienceImg from "../assets/images/experience.png";
+// import experienceImg from "../assets/images/experience.png";
 import Subtitle from "./../shared/subtitle";
 import SearchBar from "./../shared/SearchBar";
 import ServiceList from "../services/ServiceList";
-import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
 import NewsLetter from "../shared/Newsletter";
@@ -29,7 +31,7 @@ const Landing = () => {
                   <img src={worldImg} alt="" />
                 </div>
                 <h1>
-                  Traveling opens the door to creating{" "}
+                  Traveling opens the door to creating
                   <span className="hightlight"> memories</span>
                 </h1>
                 <p>
@@ -40,8 +42,16 @@ const Landing = () => {
                 </p>
               </div>
             </Col>
-
-            <Col lg="2">
+            <Col lg="6">
+              <div>
+                <img
+                  src={home1}
+                  alt=""
+                  style={{ maxWidth: "100%", height: "auto" }}
+                />
+              </div>
+            </Col>
+            {/* <Col lg="2">
               <div className="hero__img-box">
                 <img src={heroImg} alt="" />
               </div>
@@ -55,7 +65,7 @@ const Landing = () => {
               <div className="hero__img-box mt-5">
                 <img src={heroImg02} alt="" />
               </div>
-            </Col>
+            </Col> */}
 
             <SearchBar />
           </Row>
@@ -123,7 +133,7 @@ const Landing = () => {
             </Col>
             <Col lg="6">
               <div className="experience__img">
-                <img src={experienceImg} alt="" />
+                <img src={home2} alt="" />
               </div>
             </Col>
           </Row>

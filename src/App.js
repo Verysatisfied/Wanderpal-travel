@@ -50,14 +50,7 @@ function App() {
               </ProtectedRoute>
             }
           >
-            <Route
-              index
-              element={
-                <RequirePayment>
-                  <Stats />
-                </RequirePayment>
-              }
-            />
+            <Route index element={<Stats />} />
             <Route path="all-records" element={<AllJobs />} />
             <Route path="add-record" element={<AddJob />} />
 

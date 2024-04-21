@@ -97,7 +97,8 @@ const Wrapper = styled.article`
     margin-top: 1rem;
   }
   .edit-btn,
-  .delete-btn {
+  .delete-btn,
+  .details-btn {
     letter-spacing: var(--letterSpacing);
     cursor: pointer;
     height: 30px;
@@ -110,9 +111,14 @@ const Wrapper = styled.article`
   .delete-btn {
     color: var(--red-dark);
     background: var(--red-light);
+    margin-right: 0.5rem;
   }
   &:hover .actions {
     visibility: visible;
+  }
+  .details-btn {
+    color: var(--yellow-dark);
+    background: #f0ebe3;
   }
 `;
 

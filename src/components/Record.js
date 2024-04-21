@@ -93,6 +93,9 @@ const Record = ({
             >
               Delete
             </button>
+            <Link to="/dashboard/transportation" className="btn details-btn">
+              Details
+            </Link>
           </div>
         </footer>
       </div>

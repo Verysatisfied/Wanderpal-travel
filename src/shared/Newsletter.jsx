@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import "./newsletter.css";
 import { Container, Row, Col } from "reactstrap";
-import maleTourist from "../assets/images/male-tourist.png";
-
+// import maleTourist from "../assets/images/male-tourist.png";
+import home3 from "../assets/designedImg/home3.jpg";
 const NewsLetter = () => {
   const [state, handleSubmit] = useForm("xgejpwpp");
   const [email, setEmail] = useState("");
@@ -74,7 +74,7 @@ const NewsLetter = () => {
           </Col>
           <Col lg="6">
             <div className="newsletter__img">
-              <img src={maleTourist} alt="" />
+              <img src={home3} alt="" />
             </div>
           </Col>
         </Row>
