@@ -4,7 +4,8 @@ import { toast } from "react-toastify";
 import { Col, Form, FormGroup } from "reactstrap";
 import { BASE_URL } from "../utils/config";
 import { useNavigate } from "react-router-dom";
-import { GrFormSearch } from "react-icons/gr";
+import { FaPlus } from "react-icons/fa";
+
 import { CiLocationOn } from "react-icons/ci";
 import { GiPathDistance } from "react-icons/gi";
 import { MdOutlinePeopleOutline } from "react-icons/md";
@@ -51,10 +52,10 @@ const SearchBar = () => {
               </i>
             </span>
             <div>
-              <h6>Location</h6>
+              <h6>Departure</h6>
               <input
                 type="text"
-                placeholder="Where are you going?"
+                placeholder="Enter your departure location"
                 ref={locationRef}
               />
             </div>
@@ -66,11 +67,16 @@ const SearchBar = () => {
               </i>
             </span>
             <div>
-              <h6>Distance</h6>
-              <input
+              <h6>Destination</h6>
+              {/* <input
                 type="number"
-                placeholder="Distance k/m"
+                placeholder="Where are you going?"
                 ref={distanceRef}
+              />*/}
+              <input
+                type="text"
+                placeholder="Where are you going?"
+                ref={locationRef}
               />
             </div>
           </FormGroup>
@@ -81,29 +87,26 @@ const SearchBar = () => {
               </i>
             </span>
             <div>
-              <h6>Max People</h6>
-              <input type="number" placeholder="0" ref={maxGroupSizeRef} />
+              <h6>Invite Friends</h6>
+              <h8>Share with your friends</h8>
+              {/* <input type="number" placeholder="0" ref={maxGroupSizeRef} /> */}
             </div>
           </FormGroup>
-          <Link to="/dashboard/accommodation" className="start-here-button">
-            <span
-              className="search__icon"
-              type="submit"
-              onClick={searchHandler}
-            >
+          <Link to="/dashboard/group" className="start-here-button">
+            <span type="submit" onClick={searchHandler}>
               <i className="ri-search-line">
-                <GrFormSearch />
+                <FaPlus />
               </i>
             </span>
           </Link>
 
           {/* Start Here Button */}
           <Link
-            to="/pay"
-            onClick={navigateToPayPage}
+            to="/dashboard/add-record"
+            // onClick={navigateToPayPage}
             className="start-here-button"
           >
-            Start Here
+            Add Itinerary
           </Link>
         </Form>
       </div>

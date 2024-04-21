@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
+import { GrFormSearch } from "react-icons/gr";
 import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { toggleSidebar } from "../reducers/sidebarReducer";
 import { logoutUser } from "../reducers/userSlice";
@@ -36,7 +37,20 @@ export const Navbar = () => {
           <Link to="/">Home</Link> <Link to="/about">About</Link>
           {/* <Link to="/blog">Blog</Link> */}
           {user && <Link to="/dashboard">Dashboard</Link>}
+          <input
+            type="text"
+            className="input-accommodation"
+            placeholder="  Accommodation/Transportation/Tours"
+          />
+          <Link to="/dashboard/accommodation" className="start-here-button">
+            <span type="submit">
+              <i className="ri-search-line">
+                <GrFormSearch />
+              </i>
+            </span>
+          </Link>
         </ul>
+
         {/* <LoginButtons or user logoutButtons /> */}
         {user ? (
           <div className="btn-container">
@@ -87,7 +101,24 @@ const NavContainer = styled.nav`
   background: var(--white); /* Define --white or use a specific color */
   margin-bottom: 20px;
   transition: background-color 0.3s; /* Optional: for any background transition effect */
+  .start-here-button span,
+  .start-here-button i {
+    color: white; /* Ensures text is white */
+  }
+  .input-accommodation {
+    border-radius: 20px;
+    margin-left: 10px;
+    background-color: #eeeeee;
+    width: 45%;
 
+    border: 1px solid white;
+    max-width: 500px;
+
+    /* Placeholder color */
+    ::placeholder {
+      color: white;
+    }
+  }
   .nav-center {
     width: 90vw;
     margin: 0 auto;

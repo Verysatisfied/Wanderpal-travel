@@ -54,7 +54,7 @@ const BackButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: gold;
+    background-color: #e89c30;
   }
 `;
 function ForecastComponent({ forecastWeather, goBack }) {

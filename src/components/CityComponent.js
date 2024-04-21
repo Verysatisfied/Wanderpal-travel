@@ -29,7 +29,7 @@ const SearchBox = styled.form`
     font-family: Montserrat;
     font-weight: bold;
     &:hover {
-      background-color: gold; /* Change hover color */
+      background-color: #e89c30;
     }
   }
 `;

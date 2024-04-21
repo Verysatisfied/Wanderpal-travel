@@ -55,11 +55,11 @@ const RoomLink = styled(Link)`
   display: inline-block;
   text-decoration: none;
   letter-spacing: var(--mainSpacing);
-  color: var(--mainBlack); // Assuming you want to keep the text color
-  background: #ffeb3b; // A vibrant yellow background
+  color: var(--mainBlack);
+  background: #faa935;
   padding: 0.4rem 0.9rem;
-  border: 3px solid #ffeb3b; // Border color matching the background
-  transition: var(--mainTransition); // Smooth transition for hover effect
+  /* border: 3px solid #ffeb3b;  */
+  transition: var(--mainTransition);
   text-transform: uppercase;
   cursor: pointer;
   position: absolute;
@@ -69,7 +69,7 @@ const RoomLink = styled(Link)`
   transition: all 0.3s linear;
 
   &:hover {
-    background: transparent;
+    background: #e89c30;
     color: #ffeb3b; // Vibrant yellow text color on hover
     border-color: var(--mainBlack); // Optional: change border color on hover
   }

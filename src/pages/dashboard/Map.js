@@ -96,7 +96,7 @@ const SearchButton = styled.button`
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: gold; /* Change hover color */
+    background-color: #e89c30;
   }
 `;
 

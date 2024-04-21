@@ -14,6 +14,8 @@ import perfectDayIcon from "../assets/icons/perfect-day.svg";
 import rainIcon from "../assets/icons/rain.svg";
 import rainNightIcon from "../assets/icons/rain-night.svg";
 import stormIcon from "../assets/icons/storm.svg";
+import { FaBell } from "react-icons/fa"; // Assuming you use react-icons for the bell icon
+import { toast } from "react-toastify";
 
 export const WeatherInfoIcons = {
   sunset: sunsetIcon,
@@ -106,6 +108,25 @@ const InfoLabel = styled.span`
   }
 `;
 
+export const TopLeftContainer = styled.div`
+  margin: 20px;
+  padding: 10px;
+`;
+export const NotificationButton = styled.button`
+  background: #faa935;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &:hover {
+    background-color: #e89c30; // Darker shade for hover effect
+  }
+`;
 const WeatherInfoComponent = (props) => {
   const { name, value } = props;
   return (
@@ -120,6 +141,11 @@ const WeatherInfoComponent = (props) => {
 };
 const WeatherComponent = (props) => {
   const { weather } = props;
+  const handleNotificationToggle = () => {
+    // Toggle the state of the notifications (pseudo-implementation)
+    toast.info("Weather notifications are now on.");
+  };
+
   const isDay = weather?.weather[0].icon?.includes("d");
   const getTime = (timeStamp) => {
     return `${new Date(timeStamp * 1000).getHours()} : ${new Date(
@@ -129,6 +155,12 @@ const WeatherComponent = (props) => {
 
   return (
     <>
+      <TopLeftContainer>
+        <NotificationButton onClick={handleNotificationToggle}>
+          <FaBell />
+          Turn weather change notifications
+        </NotificationButton>
+      </TopLeftContainer>
       <WeatherContainer>
         <Condition>
           <span>{`${Math.floor(weather?.main?.temp - 273)}°C`}</span>
@@ -137,7 +169,6 @@ const WeatherComponent = (props) => {
         <WeatherIcon src={WeatherIcons[weather?.weather[0].icon]} />
       </WeatherContainer>
       <Location>{`${weather?.name}, ${weather?.sys?.country}`}</Location>
-
       <WeatherInfoLabel>Weather Info</WeatherInfoLabel>
       <WeatherInfoContainer>
         <WeatherInfoComponent

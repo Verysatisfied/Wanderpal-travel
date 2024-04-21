@@ -3,6 +3,8 @@ import Wrapper from "../../assets/wrappers/DashboardFormPage";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
+import { FaPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import {
   setEditRecord,
   editRecordAsync,
@@ -113,7 +115,14 @@ const AddJob = () => {
     <Wrapper>
       <form className="form">
         <h3>{isEditing ? "edit records" : "add itinerary records"}</h3>
-
+        <h7>Invite friends</h7>
+        <Link to="/dashboard/group" className="start-here-button">
+          <span type="submit">
+            <i className="ri-search-line">
+              <FaPlus />
+            </i>
+          </span>
+        </Link>
         <div className="form-center">
           {/* date */}
           <FormRow
