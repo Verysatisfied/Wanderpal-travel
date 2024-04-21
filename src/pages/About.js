@@ -14,19 +14,21 @@ const AboutPage = () => {
           <div className="title">
             <h2>our story</h2>
             <div className="underline"></div>
-          </div>
+          </div>{" "}
+          <br />
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Temporibus, dicta? Vitae aliquid ad dolorum dolore omnis veritatis
-            ipsa itaque repellat alias voluptates? Corrupti accusantium
-            voluptate ipsam voluptatum deserunt voluptatem qui!
+            Founded on a passion for exploration and a commitment to
+            convenience, our journey began as a small startup eager to simplify
+            travel planning. Over the years, we've evolved into a trusted travel
+            partner, dedicated to empowering adventurers by seamlessly
+            integrating booking, itinerary management, and real-time travel
+            insights. Every feature on our platform reflects our deep.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            ducimus pariatur veniam quos eum maxime similique, placeat, aperiam
-            harum ut assumenda tenetur iste facilis dicta aspernatur incidunt
-            unde adipisci ipsa.
+            understanding of travelers' needs and our ongoing mission to enhance
+            their travel experiences
           </p>
+          <br />
           <p className="question-text">
             Got a question?
             <a href="mailto:rongronghu1997@outlook.com" className="email-link">

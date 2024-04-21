@@ -31,14 +31,16 @@ const Landing = () => {
                   <img src={worldImg} alt="" />
                 </div>
                 <h1>
-                  Traveling opens the door to creating
-                  <span className="hightlight"> memories</span>
+                  Journey Awaits – Let's Map It Out
+                  <span className="hightlight"> Together!</span>
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Ullam ipsum nobis asperiores soluta voluptas quas voluptates.
-                  Molestiae tempora dignissimos, animi praesentium molestias
-                  perferendis porro expedita delectus. Soluta natus porro.
+                  Welcome to your one-stop travel hub! With us, you can
+                  effortlessly book your transport and accommodations, explore
+                  detailed travel routes, check real-time weather updates, and
+                  manage all your travel plans in one convenient place! Let's
+                  map out your next journey together, where your dream
+                  destinations are just a few clicks away!
                 </p>
               </div>
             </Col>
@@ -111,8 +113,9 @@ const Landing = () => {
                   With our all experience <br /> we will serve you
                 </h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  <br /> Quas aliquam, hic tempora inventore suscipit unde.{" "}
+                  With years of experience, we have successfully helped
+                  countless travelers fulfill their journey dreams.
+                  {/* <br /> Quas aliquam, hic tempora inventore suscipit unde. */}
                 </p>
               </div>
 

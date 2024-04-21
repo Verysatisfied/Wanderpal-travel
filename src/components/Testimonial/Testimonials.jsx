@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import ava01 from "../../assets/images/ava-1.jpg";
 import ava02 from "../../assets/images/ava-2.jpg";
 import ava03 from "../../assets/images/ava-3.jpg";
+import ava04 from "../../assets/images/avatar.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const Testimonials = () => {
@@ -39,10 +40,11 @@ const Testimonials = () => {
     <Slider {...settings}>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus sit,
-          explicabo provident hic distinctio molestias voluptates nobis alias
-          placeat suscipt earum debitits recusandae voluptate illum expedita
-          corrupti aliquid doloribus delectus?
+          This site has revolutionized the way I travel! Booking is smooth, and
+          having all my travel info in one place is a game changer. Highly
+          recommend!
+          <br />
+          <br />
         </p>
 
         <div className="d-flex align-items-center gap-4 mt-3">
@@ -56,10 +58,10 @@ const Testimonials = () => {
 
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus sit,
-          explicabo provident hic distinctio molestias voluptates nobis alias
-          placeat suscipt earum debitits recusandae voluptate illum expedita
-          corrupti aliquid doloribus delectus?
+          I used this website for my last European tour, and it was a lifesaver!
+          Managed all my bookings and itineraries without a hitch. Fantastic
+          tool for travelers!
+          <br />
         </p>
 
         <div className="d-flex align-items-center gap-4 mt-3">
@@ -73,10 +75,11 @@ const Testimonials = () => {
 
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus sit,
-          explicabo provident hic distinctio molestias voluptates nobis alias
-          placeat suscipt earum debitits recusandae voluptate illum expedita
-          corrupti aliquid doloribus delectus?
+          Never thought planning a trip could be this easy! From hotels to
+          transport, everything was at my fingertips. Great user interface and
+          reliable service
+          <br />
+          <br />
         </p>
 
         <div className="d-flex align-items-center gap-4 mt-3">
@@ -90,16 +93,15 @@ const Testimonials = () => {
 
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus sit,
-          explicabo provident hic distinctio molestias voluptates nobis alias
-          placeat suscipt earum debitits recusandae voluptate illum expedita
-          corrupti aliquid doloribus delectus?
+          Impressive service! The route suggestions were spot on and the booking
+          process was incredibly easy. This website has become my go-to for all
+          my travels.
         </p>
 
         <div className="d-flex align-items-center gap-4 mt-3">
-          <img src={ava03} className="w-25 h-25 rounded-2" alt="" />
+          <img src={ava04} className="w-25 h-25 rounded-2" alt="" />
           <div>
-            <h6 className="mb-0 mt-3">John Doe</h6>
+            <h6 className="mb-0 mt-3">Lily Gomez</h6>
             <p>Customer</p>
           </div>
         </div>
