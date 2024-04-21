@@ -7,11 +7,11 @@ const Group = () => {
     <div>
       <ChatComponent />
       <BudgetManager />
-      <img
+      {/* <img
         src={transportationImg}
         alt="Transportation"
         style={{ width: "100%", height: "auto", marginTop: "30px" }}
-      />
+      /> */}
     </div>
   );
 };
